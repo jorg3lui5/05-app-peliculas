@@ -9,10 +9,7 @@ import { Pelicula } from '../interfaces/interfaces';
 })
 export class Tab1Page implements OnInit{
   peliculasRecientes : Pelicula[] =[]; 
-  slideOpts = {
-    slidesPerView: 1.3,
-    freeMode: true
-  };
+
   constructor(
     private moviesService: MoviesService
   ) {}
