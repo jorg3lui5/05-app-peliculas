@@ -42,4 +42,8 @@ export class DetalleComponent implements OnInit {
   regresar(){
     this.modalController.dismiss();
   }
+
+  favorito(){
+    
+  }
 }

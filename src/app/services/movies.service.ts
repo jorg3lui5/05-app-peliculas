@@ -59,6 +59,6 @@ export class MoviesService {
 
   buscarPeliculas(tituloPelicula: string){
     const query: string= `/search/movie?query=${tituloPelicula}`;
-    return this.ejecutarQuery<RespuestaCredits>(query);
+    return this.ejecutarQuery(query);
   }
 }
