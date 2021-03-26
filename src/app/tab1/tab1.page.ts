@@ -13,7 +13,8 @@ export class Tab1Page implements OnInit{
   peliculasPopulares : Pelicula[] = [];
 
   constructor(
-    private moviesService: MoviesService
+    private moviesService: MoviesService,
+    
   ) {}
 
   ngOnInit() {

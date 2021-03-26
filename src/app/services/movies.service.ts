@@ -56,4 +56,9 @@ export class MoviesService {
     return this.ejecutarQuery<RespuestaCredits>(query);
   }
 
+
+  buscarPeliculas(tituloPelicula: string){
+    const query: string= `/search/movie?query=${tituloPelicula}`;
+    return this.ejecutarQuery<RespuestaCredits>(query);
+  }
 }
