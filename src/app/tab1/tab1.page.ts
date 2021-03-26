@@ -22,11 +22,20 @@ export class Tab1Page implements OnInit{
         console.log('Peliculas nuevas y cartelera:',resp);
         this.peliculasRecientes=resp.results;
       });
+    
+    this.getPopulares();
+  }
 
-      this.moviesService.getPopulares()
-      .subscribe(resp=>{
-        console.log('Populares:',resp);
-        this.peliculasPopulares=resp.results;
-      });
+  cargarMas(){
+    this.getPopulares();
+  }
+
+  getPopulares(){
+    this.moviesService.getPopulares()
+    .subscribe(resp=>{
+      console.log('Populares:',resp);
+      const arreTemp= [... this.peliculasPopulares, ...resp.results];
+      this.peliculasPopulares = arreTemp;
+    });
   }
 }
