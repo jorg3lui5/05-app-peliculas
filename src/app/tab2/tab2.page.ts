@@ -6,7 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  textoBuscar: string = '';
+  ideas: string[] = ['Spiderman', 'Avenger', 'El señor de los anillos', 'La vida es bella']
   constructor() {}
 
+  buscar(event) {
+    const valor=event.detail.value;
+    console.log(valor);
+
+  }
+
+  buscarPeliculaSeleccionada(idea:string){
+    this.textoBuscar=idea;
+  }
 }
